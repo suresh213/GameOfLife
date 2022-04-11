@@ -26,7 +26,7 @@ public class GameOfLifeTest {
 
         GameOfLife gameOfLife = new GameOfLife(board);
         gameOfLife.nextGeneration();
-        List<List<Integer>> actual = gameOfLife.getLiveCellsCoordinates();
+        List<List<Integer>> actual = gameOfLife.getAliveCellsCoordinates();
 
         assertArrayEquals(expected.toArray(), actual.toArray());
     }
@@ -49,7 +49,7 @@ public class GameOfLifeTest {
 
         GameOfLife gameOfLife = new GameOfLife(board);
         gameOfLife.nextGeneration();
-        List<List<Integer>> actual = gameOfLife.getLiveCellsCoordinates();
+        List<List<Integer>> actual = gameOfLife.getAliveCellsCoordinates();
 
         assertArrayEquals(expected.toArray(), actual.toArray());
     }
@@ -70,7 +70,7 @@ public class GameOfLifeTest {
 
         GameOfLife gameOfLife = new GameOfLife(board);
         gameOfLife.nextGeneration();
-        List<List<Integer>> actual = gameOfLife.getLiveCellsCoordinates();
+        List<List<Integer>> actual = gameOfLife.getAliveCellsCoordinates();
 
         assertArrayEquals(expected.toArray(), actual.toArray());
     }
@@ -94,7 +94,7 @@ public class GameOfLifeTest {
 
         GameOfLife gameOfLife = new GameOfLife(board);
         gameOfLife.nextGeneration();
-        List<List<Integer>> actual = gameOfLife.getLiveCellsCoordinates();
+        List<List<Integer>> actual = gameOfLife.getAliveCellsCoordinates();
 
         assertArrayEquals(expected.toArray(), actual.toArray());
     }

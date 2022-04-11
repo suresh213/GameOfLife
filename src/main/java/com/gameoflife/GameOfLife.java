@@ -44,7 +44,7 @@ public class GameOfLife {
         return neighboursCount;
     }
 
-    public List<List<Integer>> getLiveCellsCoordinates() {
+    public List<List<Integer>> getAliveCellsCoordinates() {
         List<List<Integer>> liveCellsCoordinates = new ArrayList<>();
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[0].length; j++) {
