@@ -1,23 +1,17 @@
 package com.gameoflife;
 
+import com.gameoflife.Board.Board;
+import com.gameoflife.Board.BoardController;
+import com.gameoflife.Utils.Position;
+
 public class GameOfLife {
-    Cell[][] board;
+    Board board;
+    BoardController boardController;
 
-    public GameOfLife(Cell[][] board) {
-        this.board = board;
-    }
+    public void runGame(int boardSize, Position[] aliveCellPositions) {
+        this.board = new Board(boardSize, aliveCellPositions);
+        this.boardController = new BoardController(board);
 
-    public void nextGeneration() {
-        for (Cell[] row : board) {
-            for (Cell cell : row) {
-                cell.evolve(board);
-            }
-        }
-        for (Cell[] row : board) {
-            for (Cell cell : row) {
-                if (cell.status == CellStatus.TOGGLEHELPER2) cell.setStatus(CellStatus.DEAD);
-                if (cell.status == CellStatus.TOGGLEHELPER3) cell.setStatus(CellStatus.ALIVE);
-            }
-        }
+        boardController.update();
     }
 }
